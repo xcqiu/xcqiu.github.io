@@ -1,2 +1,2 @@
-# personal_website
-source code and resources of personal website
+# Personal Website
+Source code and resources of personal website. 
