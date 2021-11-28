@@ -1,0 +1,51 @@
+
+
+p{
+  font-family: helvetica;
+}
+
+@media (min-width: 576px) .nd-pageheader {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+#pageheader a {
+    color: inherit;
+    /* remove link color*/
+}
+
+.nd-pageheader .container {
+    position: relative;
+}
+
+@media (min-width: 768px) .container {
+    width: 720px;
+    max-width: 100%;
+}
+
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.nd-pageheader a {
+    color: #e4f1fe;
+}
+
+.contain { 
+    text-align:center; 
+    max-width: 1200px;
+}
+
+.social {
+  display: inline-block;
+  padding: 10px;
+}

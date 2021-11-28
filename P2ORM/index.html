@@ -1,0 +1,136 @@
+<html class="gr__xishen_com">
+
+<head>
+    <title>P2ORM</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Pixel-Pair Occlusion Relationship Map (P2ORM): Formulation, Inference & Application">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="P2ORM">
+    <meta name="twitter:description" content="Pixel-Pair Occlusion Relationship Map (P2ORM): Formulation, Inference & Application">
+    <!-- <meta name="twitter:image" content=""> -->
+    <link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/styles/placeholder.css" type="text/css">
+    <script type="text/javascript" id="cosymantecbfw_removeToolbar">
+        (function() {
+                var toolbarElement = {},
+                    parent = {},
+                    interval = 0,
+                    retryCount = 0,
+                    isRemoved = false;
+                if (window.location.protocol === 'file:') {
+                    interval = window.setInterval(function() {
+                                toolbarElement = document.getElementById('coFrameDiv');
+                                if (toolbarElement) {
+                                    parent = toolbarElement.parentNode;
+                                    if (parent) {
+                                        parent.removeChild(toolbarE truncated 716 bytes...
+    </script>
+</head>
+
+<body class="nd-docs" data-gr-c-s-loaded="true">
+    <div id="pageheader" class="container-fluid" style="text-align: center; background-color: #37a2a8; padding: 2rem 15px; margin-bottom: 1.5rem; color: #e4f1fe;">
+        <p></p>
+        <h2>Pixel-Pair Occlusion Relationship Map (P2ORM): Formulation, Inference & Application</h2>
+        <p><a href="https://eccv2020.eu/">ECCV 2020 (Spotlight)</a></p>
+        <p>
+            <a href="http://imagine.enpc.fr/~qiux/">Xuchong Qiu</a><sup>1</sup> &nbsp; &nbsp;
+            <a href="https://youngxiao13.github.io/">Yang Xiao</a><sup>1</sup> &nbsp; &nbsp;
+            <a href="http://igm.univ-mlv.fr/~cwang/index.php">Chaohui Wang</a><sup>1</sup> &nbsp; &nbsp;
+            <a href="http://imagine.enpc.fr/~marletr/">Renaud Marlet</a><sup>1,2</sup>
+        </p>
+        <p>
+            <sup>1</sup><a href="http://imagine.enpc.fr/">LIGM - Ecole des Ponts, Univ Gustave Eiffel, CNRS, ESIEE Paris, France</a> &nbsp; &nbsp;
+            <sup>2</sup><a href="https://www.valeo.com/en/valeo-ai/">valeo.ai, Paris, France</a>
+        </p>
+        <p>
+            <a href="https://github.com/tim885/P2ORM">GitHub</a> &nbsp; &nbsp;
+            <a href="https://arxiv.org/pdf/2007.12088.pdf">arXiv</a>
+        </p>
+    </div>
+
+    <!-- contents -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+  		          <div class="container" style="margin-bottom: 10px; text-align: center;">
+  		              <a download=" img/header_img.png " href="img/header_img.png" title="teaser"> <img id="teaser" src="img/header_img.png" style="width: 100%; max-width: 1400px;/"> </a>
+                </div>
+
+                <h2>Abstract</h2>
+                <p>
+                    We formalize concepts around geometric occlusion in 2D images (i.e., ignoring semantics), and propose a novel unified formulation
+                    of both occlusion boundaries and occlusion orientations via a pixel-pair occlusion relation. The former provides a way to generate
+                    large-scale accurate occlusion datasets while, based on the latter, we propose a novel method for task-independent pixel-level occlusion
+                    relationship estimation from single images. Experiments on a variety of datasets demonstrate that our method outperforms existing ones
+                    on this task. To further illustrate the value of our formulation, we also propose a new depth map refinement method that consistently
+                    improve the performance of state-of-the-art monocular depth estimation methods.
+                </p>
+
+                <h2>Method</h2>
+                <p>
+                    For occlusion relationship estimation, we use a encoder-decoder structure (P2ORNet) which takes an RGB image as input and outputs neighbor pixel-pair occlusion relationships.
+                    By concatenating estimated occlusion relationships with coarse depth estimation, we use another encoder-decoder structure (DRNet) to achieve depth map refinement.
+                </p>
+
+        				<div class="contain">
+          				  <div align="center;" class="social">
+              					<img src="img/overview.png" alt="" style="width: 100%; max-width: 1600px;"/>
+              					<figcaption> Overview </figcaption>
+          				  </div>
+        				</div>
+
+                <h2>Visual Results</h2>
+                <div class="container" style="margin-bottom: 10px; text-align: center;">
+                    <img id="teaser" src="img/occ_vis_bsds.png" style="width: 100%; max-width: 1200px;">
+                    <figcaption> Occlusion boundary and orientation estimation </figcaption>
+                </div>
+
+                <div class="container" style="margin-bottom: 10px; text-align: center;">
+                    <img id="teaser" src="img/depth_viz_nyudv2.png" style="width: 100%; max-width: 1200px;">
+                    <figcaption> Depth map refinement </figcaption>
+                </div>
+
+        				<p>
+                <h2>Paper, Code and Citation</h2>
+        		    <div class="row">
+                    <div class="col text-center">
+                        <p>
+                            <a href="https://github.com/tim885/P2ORM" class="d-inline-block p-3 align-top"><img height="150" width="120" src="img/github.png" style="border:1px solid" data-nothumb=""><br>Code and Data<br>Github</a>
+                            <a href="https://arxiv.org/pdf/2007.12088.pdf" class="d-inline-block p-3 align-top"><img height="150" width="120" src="img/paper_icon.png" style="border:1px solid" data-nothumb=""><br>Paper PDF<br></a>
+                            <a href="supp.pdf" class="d-inline-block p-3 align-top"><img height="150" width="120" src="img/supp_icon.png" style="border:1px solid" data-nothumb=""><br>Supplementary Material<br></a>
+                        </p>
+                    </div>
+                </div>
+                <p>To cite our paper,</p>
+                <div class="card">
+                    <div class="card-block">
+                        <pre class="card-text clickselect">@inproceedings{Qiu2020P2ORM,
+  title     = {Pixel-{P}air Occlusion Relationship Map ({P2ORM}): Formulation, Inference \& Application},
+  author    = {Xuchong Qiu and Yang Xiao and Chaohui Wang and Renaud Marlet},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2020}}
+                        </pre>
+                   </div>
+                </div>
+
+        <br />
+        <br />
+        <p></p>
+        <p></p>
+        <p></p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<div id="coFrameDiv" style="height:0px;display:none;">
+    <iframe id="coToolbarFrame" src="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/placeholder.html" style="height:0px;width:100%;display:none;"></iframe>
+</div>
+
+</html>
