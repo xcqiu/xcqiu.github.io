@@ -1674,6 +1674,10 @@
 		margin-bottom: 2em;
 	}
 
+	.text-left {
+		text-align: left;
+	}
+
 	br.clear {
 		clear: both;
 	}
